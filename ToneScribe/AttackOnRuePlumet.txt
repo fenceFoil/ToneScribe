@@ -1,0 +1,37 @@
+#Les Miserables: Attack on Rue Plumet
+
+KGmajor T140
+
+T+20 T-20www
+G5s Bs G5s Bs F5s As F5s As E5s As E5s As G5s Bs G5s Bs
+G5s Bs G5s Bs F5s As F5s As E5s As E5s As G5s Bs G5s Bs
+E3i Ri E3i Ri E3i Ri E3i Ri
+E3i Ri E3i Ri E3i Ri E3i
+#"'Parnasse!"
+Gi Fi E3i Gs As Bs Asi Gi E3i
+Gi Fi E3i Gs As Bs Esq E3i
+#"This house,"
+Gi Fi E3i Gs As Bs Asi Gi E3i
+Gi Fi E3i Gs As Bs Esq Ri
+#"You remember, he's the bloke wot"
+T-5
+Ei Ei Ei Ei Fi Fi Fi Fi
+Ai Ai Ai Ai G#s Fs E Ri
+Gi Gi Gi Gi Ai AI Ai Ai
+T-20q
+C5i C5i T-80hq C5i C5i Bs C5s B Rqi #long
+#restore tempo
+T+105
+
+#Verse 2
+E3i Ri E3i Ri E3i Ri E3i Ri
+E3i Ri E3i Ri E3i Ri E3i
+#"Oh lord!"
+Gi Fi E3i Gs As Bs Asi Gi E3i
+Gi Fi E3i Gs As Bs Esq E3i
+Gi Fi E3i Gs As Bs Asi Gi E3i
+T-20q Gi Fi Gi Ai T-20q Bi Ei Ri
+T+40 #Restore tempo
+#"What'll I do?"
+Gs Fs Es D#s Ri Gs Fs Es D#s Rs
+Es D#i Es D#i Es D#i T+40h Es D#s Ei D#i Cs B3iq

@@ -1,0 +1,34 @@
+# Gilbert and Sullivan: Princess Ida: Death to the Invader
+
+KEbMajor
+T150
+Tran+12
+
+E5q. E5i E5q. E5i E5i
+Tran-12
+Bi Ai Gi Fi Ei Di Ci
+Tran+12
+E5q. E5i E5q. E5i E5i
+Tran-12
+Bi Ai Gi Fi Ei Di Ci
+Tran+12
+F5q. F5i F5q. F5i F5i
+Tran-12
+Ci Bi Ai Gbi Fi Ei Di
+Tran+12
+F#5q. F#5i F#5q. F#5i G5i
+Tran-12
+Bni Gi Bni Gi D5i Gi G5i
+Tran+12
+E6w D6q
+Tran-12
+Bni Gi Bni Gi D5i Gi G5i
+Tran+12
+E6w D6q
+Tran-12
+Bni Gi D5i Gi Bni Gi D5i
+Gi D5i Gi F5i Gi D5i Gi F5i
+Tran+12
+Gi Bni D5i F5i G5i Bn5i D6i F6i
+A6i G6i F6i D6i Bn5i G5i A5i G5i
+#Chorus

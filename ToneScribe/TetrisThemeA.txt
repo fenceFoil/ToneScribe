@@ -1,0 +1,16 @@
+# Tetris Theme A
+
+T160
+E5 Bi C5i D5i E5s D5s C5i Bi
+A Ai C5i E5 D5i C5i
+Bqi C5i D5 E5
+C5 A Ah
+Ri D5 F5i A5 G5i F5i
+E5q. C5i E5 D5i C5i
+B Bi C5i D5 E5
+C5 A A R
+Eh Ch Dh B3h
+Ch A3h G#3h B3qi Ri
+Eh Ch Dh B3h
+C E Ah
+G#w

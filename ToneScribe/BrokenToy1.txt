@@ -1,0 +1,11 @@
+#The World is But a Broken Toy
+
+#Intro
+T100
+KBmajor
+F5h.i B5i A5i G5i F5s E5s D5s C5s
+Bs A#s Bs D5s F
+C5s B#s C5s F5s Bi Fi Ri
+
+#Verse1
+F D5q.

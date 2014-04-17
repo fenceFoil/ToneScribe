@@ -1,0 +1,28 @@
+#Les Miserables: Overture
+
+T72 KAbMajor
+
+T+50
+Tran-28
+
+#Measure 1
+#B3i E E6i Rs E6s E6q.
+B3i E E6i Rs E6s E6q E6i
+B3i Ei Fi Gbi Fi E Ri
+#B3i E Cb6i Rs Cb6s Cb6q.
+B3i E Cb6i Rs Cb6s Cb6q Cb6i
+B3i Di B3i B3i A3i B3 E3i Ei
+#Measure 6
+#Aq A6i Rs A6s A6q. 
+Aq A6i Rs A6s A6q A6i
+Ei Ai Bi Cb5i Bi A Ri
+#Ei Aq F6bi Rs F6bs F6bq.
+Ei Aq F6bi Rs F6bs F6bq F6bi
+#T-20ww
+T-60ww
+Ei Gbi Ei Ei Di
+Tran12
+Gbi Ei Ei Di
+Tran12
+Gbi Ei Ei Di Ei
+

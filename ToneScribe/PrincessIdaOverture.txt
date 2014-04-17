@@ -1,0 +1,44 @@
+#Princess Ida Overture
+
+T275 KEbmajor
+
+#Initial burst of speed
+T+30 T-30wwwh
+
+C6i B5i G5 G5 G5 G5 G5 G5 G5
+C6i B5i G5 G5 An5 B5h Rh
+B5i A5i F5 F5 F5 F5 F5 F5 F5
+B5i A5i F5 F5 G5 A5h Rh
+
+D5 D5 D5 C#5i D5i
+E5 E5 E5 D5i E5i
+F5 F5 F5 En5i F5i
+Gb5 Gb5 Gb5 F5i Gb5i 
+G5 G5 R F#5
+G5 G5 R F#5
+G5 G5 R F#5
+G5 Rqh
+
+# Decellerating...
+
+A A R G A A R G A Rqh
+T-150wwwwww
+An Rqh B Rqh
+Rh Dh Fh C5h Bhq Rq
+Bh Anh Ah Ah Gh Fh Eh Ew B3h Rhw
+Fw B3h Rhw
+
+# O Goddess
+
+#Ei E E Ei 
+G C5q. Bi Bh 
+B Bq. C5i D5i E5i E5 F R
+Fi F5h E5i C5i Bh
+E5 Bq. C5i Bi Ai Gh R
+#"At this..."
+G Anq. Ani Bh 
+G Gq. Gi Ani Ani Bi. Ans B B
+C5h C#5i C#5i D5 F5hi
+Fi F C5 Bi
+B3i Di Fi Bi Fi
+#"Let fervent..."

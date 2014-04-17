@@ -1,0 +1,61 @@
+# Key Signatures Token Values
+#
+#
+# Shorthand version, "major" implied
+#
+#
+kcb = -7
+kgb = -6
+kdb = -5
+kab = -4
+keb = -3
+kbb = -2
+kf = -1
+kc = 0
+kg = 1
+kd = 2
+ka = 3
+ke = 4
+kb = 5
+kf# = 6
+kc# = 7
+#
+#
+# Major
+#
+#
+kcbmajor = -7
+kgbmajor = -6
+kdbmajor = -5
+kabmajor = -4
+kebmajor = -3
+kbbmajor = -2
+kfmajor = -1
+kcmajor = 0
+kgmajor = 1
+kdmajor = 2
+kamajor = 3
+kemajor = 4
+kbmajor = 5
+kf#major = 6
+kc#major = 7
+#
+#
+# Minor
+#
+#
+kabminor = -7
+kebminor = -6
+kbbminor = -5
+kfminor = -4
+kcminor = -3
+kgminor = -2
+kdminor = -1
+kaminor = 0
+keminor = 1
+kbminor = 2
+kf#minor = 3
+kc#minor = 4
+kg#minor = 5
+kd#minor = 6
+ka#minor = 7

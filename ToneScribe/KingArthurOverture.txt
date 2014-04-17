@@ -1,0 +1,30 @@
+#Henry Purcell: King Arthur: Overture
+
+T70
+Tran+12
+F Fi. Gs E Ri A3i
+F Fi. Gs E Ri Ei
+G Gi. As F Ri Ei
+G Gi. As F Ri Ai
+B Bs As Bi A Ri Ai
+B Bs As Bi A Ri Di
+C Ci. Ds B3 Ri Di
+C Ci. Ds B3 Ri Ei
+E Fi Di C# Ri Ei
+E Fi Di C# Ri Ci
+D Ei F Ri Gi 
+A Ri Ai B Ri Gi
+Ei Fi Ei E3i A3i Ai Gi G3i
+Ci C5i Ai A3i Di Bi Gi Di
+Gi Gi Ei Gi C# Ri Fi
+D Ri Gi E Ri Ai
+F Ri Bi Gi Ai Gi G3i
+F3i Gi Fi F3i E3i Ei Fi E3i
+F3i Ei Fi E3i F3i Ei Fi Gi
+Eq. Di Dh
+#Commmon Time
+KFmajor T120
+Di Ds Ds Di Di A3i A3i Di Di
+A3i A3s B3s A3i G3i F3i Di E3i C#i
+Ai As As Ai Ai Ei Ei Ai Ai 
+Di Ds Es Di Di Ci Ai B3i Gi

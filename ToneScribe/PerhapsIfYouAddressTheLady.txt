@@ -1,0 +1,36 @@
+# Gilbert and Sullivan: Princess Ida: P'raps If You Address the Lady
+
+KGMajor
+Tran+12
+D6i. D6s D6i D6i D6i. D6s D6i D6i 
+B3i Di Ci A3i B3i Di Ci A3i B3i Di Ci A3i B3i Di Ci A3i
+#Gama
+Di Ei Di C#i Di Gi Bi Ai
+Gi. As Gi Fi Gi. As Gi Fi
+Di Ei Di C#i Di Gi Bi Ai
+Gi. As Gi Fi Gi. As Gi Fi
+Gi Ai Gi D5i C5i Bi C5
+Gi Ai Gi D5i C5i Bi C5
+T-60hq
+Ei Fni Ei Bi Ai Ai Eq R
+T+60
+Di. Es Di C#i Di. Es Di C#i
+T-10hq
+Di Ri Bi Ri Ah G R
+T+10
+
+B3i Di Ci A3i B3i Di Ci A3i B3i Di Ci A3i B3i Di Ci A3i
+#Hildebrand
+Di Ei Di C#i Di Gi Bi Ai
+Gi. As Gi Fi Gi. As Gi Fi
+Di Ei Di C#i Di Gi Bi Ai
+Gi. As Gi Fi Gi. As Gi Fi
+Gi Ai Gi D5i C5i Bi C5
+Gi Ai Gi D5i C5i Bi C5
+T-60hq
+Ei Fni Ei Bi Ai Ai Eq R
+T+60
+Di. Es Di C#i Di. Es Di C#i
+T-10hq
+Di Ri Bi Ri Ah G R
+T+10
