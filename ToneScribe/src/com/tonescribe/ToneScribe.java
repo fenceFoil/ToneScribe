@@ -43,6 +43,10 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -51,12 +55,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 
+import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBoxMenuItem;
@@ -73,9 +76,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
 import javax.swing.JSplitPane;
 import javax.swing.JTextArea;
+import javax.swing.KeyStroke;
+import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-
-import org.omg.CORBA.VersionSpecHelper;
 
 import com.tonescribe.song.Song;
 import com.tonescribe.song.SongPlayer;
@@ -89,18 +92,13 @@ import com.tonescribe.song.linker.SongLinker;
 import com.tonescribe.update.CompareVersion;
 import com.tonescribe.update.FileUpdater;
 
-import javax.swing.KeyStroke;
-
-import java.awt.event.KeyEvent;
-import java.awt.event.InputEvent;
-
-import javax.swing.SwingConstants;
-
+@SuppressWarnings("serial")
 public class ToneScribe extends JFrame implements ClipboardOwner {
 
 	public static String CURRENT_VERSION = "1.0.0";
 	public static String UPDATE_INFO_URL = "https://dl.dropbox.com/s/7lhpka9t1inz8qb/currentVersion.txt";
 	public static String WEBSITE_URL = "http://tonescribe.weebly.com/";
+	public static String OUTPUT_WEBSITE_URL = "http://tonescribe.weebly.com/output.html";
 
 	private JPanel contentPane;
 	private Thread updateOutputThread;
@@ -114,6 +112,7 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 	private JMenu mnInsert;
 	private JRadioButtonMenuItem rdbtnmntmRtttl;
 	private JRadioButtonMenuItem rdbtnmntmTonescribe;
+	protected static boolean openFileChanged = false;
 	private static FileUpdater updater = new FileUpdater(UPDATE_INFO_URL,
 			"toneScribe");
 
@@ -128,6 +127,7 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 					frame.setVisible(true);
 
 					if (ToneScribePreferences.getLastOpened() != null) {
+						openFileChanged = false;
 						frame.openFile(new File(ToneScribePreferences
 								.getLastOpened()));
 					}
@@ -142,6 +142,12 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 	 * Create the frame.
 	 */
 	public ToneScribe() {
+		addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent arg0) {
+				askForSave();
+			}
+		});
 		setIconImage(Toolkit.getDefaultToolkit().getImage(
 				ToneScribe.class.getResource("/com/tonescribe/music.png")));
 		setTitle("ToneScribe");
@@ -222,7 +228,7 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 		});
 
 		mnInsert = new JMenu("Insert");
-		menuBar.add(mnInsert);
+		// XXX: menuBar.add(mnInsert);
 
 		JMenuItem mntmNote = new JMenuItem("Note...");
 		mntmNote.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N,
@@ -264,7 +270,7 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 			}
 		});
 
-		JMenuItem mntmStopPreview = new JMenuItem("Stop\r\n");
+		JMenuItem mntmStopPreview = new JMenuItem("Mute");
 		mntmStopPreview.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M,
 				InputEvent.CTRL_MASK));
 		mntmStopPreview.addActionListener(new ActionListener() {
@@ -294,7 +300,7 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 		JSeparator separator_2 = new JSeparator();
 		mnPlay.add(separator_2);
 
-		JMenuItem mntmSavePreviewAs = new JMenuItem("Save Selection As...");
+		JMenuItem mntmSavePreviewAs = new JMenuItem("Save Selection As WAV...");
 		mnPlay.add(mntmSavePreviewAs);
 		mntmSavePreviewAs.addActionListener(new ActionListener() {
 
@@ -363,8 +369,19 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 		JMenu mnOutput = new JMenu("Output");
 		menuBar.add(mnOutput);
 
+		JRadioButtonMenuItem rdbtnmntmGeneric = new JRadioButtonMenuItem(
+				"Generic");
+		mnOutput.add(rdbtnmntmGeneric);
+		rdbtnmntmGeneric.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				changeLinker(new GenericSongLinker());
+			}
+		});
+
 		JRadioButtonMenuItem rdbtnmntmStandardBeepStatements = new JRadioButtonMenuItem(
-				"beep() Statements");
+				"TI beep() & __delay_cycles()");
 		mnOutput.add(rdbtnmntmStandardBeepStatements);
 		rdbtnmntmStandardBeepStatements.addActionListener(new ActionListener() {
 
@@ -375,7 +392,7 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 		});
 
 		JRadioButtonMenuItem rdbtnmntmPreciseTones = new JRadioButtonMenuItem(
-				"Precise Tones");
+				"TI Complete Code");
 		mnOutput.add(rdbtnmntmPreciseTones);
 		rdbtnmntmPreciseTones.addActionListener(new ActionListener() {
 
@@ -385,6 +402,9 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 			}
 		});
 
+		if (songLinker instanceof GenericSongLinker) {
+			rdbtnmntmGeneric.setSelected(true);
+		}
 		if (songLinker instanceof BeepSongLinker) {
 			rdbtnmntmStandardBeepStatements.setSelected(true);
 		}
@@ -393,6 +413,7 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 		}
 
 		ButtonGroup songLinkerGroup = new ButtonGroup();
+		songLinkerGroup.add(rdbtnmntmGeneric);
 		songLinkerGroup.add(rdbtnmntmStandardBeepStatements);
 		songLinkerGroup.add(rdbtnmntmPreciseTones);
 
@@ -400,6 +421,20 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 		mnOutput.add(separator_3);
 
 		JMenuItem mntmMoreInfo = new JMenuItem("More Info...");
+		mntmMoreInfo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if (Desktop.isDesktopSupported()) {
+					try {
+						Desktop.getDesktop()
+								.browse(new URI(OUTPUT_WEBSITE_URL));
+					} catch (IOException e) {
+						e.printStackTrace();
+					} catch (URISyntaxException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		});
 		mnOutput.add(mntmMoreInfo);
 
 		JMenu mnView = new JMenu("View");
@@ -614,6 +649,9 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 						lastCompiler = songCompiler;
 						lastSongLinker = songLinker;
 
+						openFileChanged = true;
+						updateWindowTitle();
+
 						// Delay between compilations
 						try {
 							Thread.sleep(500);
@@ -667,6 +705,8 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 	}
 
 	protected void closeProgram() {
+		askForSave();
+
 		updateOutputThread.interrupt();
 		frame.dispose();
 	}
@@ -760,6 +800,21 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 		menuBar.validate();
 	}
 
+	private void askForSave() {
+		if (openFileChanged) {
+			// Ask user whether they want to save their work first
+			int choice = JOptionPane.showConfirmDialog(
+					frame,
+					"Save changes to "
+							+ ((openFile == null) ? "current song" : openFile
+									.getName()) + "?", "Save Changes",
+					JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+			if (choice == JOptionPane.YES_OPTION) {
+				save();
+			}
+		}
+	}
+
 	protected void save() {
 		boolean errors = false;
 
@@ -793,6 +848,7 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 
 		if (!errors) {
 			statusBarLabel.setText("Saved " + openFile.getName());
+			openFileChanged = false;
 		} else {
 			statusBarLabel.setText("Could note save " + openFile.getName());
 		}
@@ -861,6 +917,9 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 		title.append("ToneScribe");
 		if (openFile != null) {
 			title.append(" - ").append(openFile.getName());
+			if (openFileChanged) {
+				title.append(" * ");
+			}
 		}
 		frame.setTitle(title.toString());
 	}
@@ -871,6 +930,7 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 	}
 
 	protected void openFile(File selectedFile) {
+		askForSave();
 		// Open file
 		resetOpenFile();
 		openFile = selectedFile;

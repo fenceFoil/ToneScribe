@@ -116,8 +116,8 @@ public class PreciseSongLinker implements SongLinker {
 			int delayCycles = (1000000 / freq) / 2;
 
 			freqSwitchBuilder.append("\t\tcase ").append(freq).append(": \n");
-			freqSwitchBuilder.append("\t\t\t__delay_cycles(").append(delayCycles)
-					.append(");\n");
+			freqSwitchBuilder.append("\t\t\t__delay_cycles(")
+					.append(delayCycles).append(");\n");
 			freqSwitchBuilder.append("\t\t\tbreak;\n");
 		}
 		freqSwitchBuilder.append("\t\t}\n");

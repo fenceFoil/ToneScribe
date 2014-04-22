@@ -44,10 +44,11 @@ public class GenericSongLinker implements SongLinker {
 	public String link(Song song) {
 		StringBuilder builder = new StringBuilder();
 		for (SongEvent e : song.getTones()) {
-			if (e.getTimeSeconds() < song.getSelectionStartTimeSec() || e.getTimeSeconds() > song.getSelectionEndTimeSec()) {
+			if (e.getTimeSeconds() < song.getSelectionStartTimeSec()
+					|| e.getTimeSeconds() > song.getSelectionEndTimeSec()) {
 				continue;
 			}
-			
+
 			if (e instanceof ToneEvent) {
 				builder.append("beep(")
 						.append((int) ((ToneEvent) e).getPitch()).append(", ")

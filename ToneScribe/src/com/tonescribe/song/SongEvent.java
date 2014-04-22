@@ -35,7 +35,6 @@ package com.tonescribe.song;
  */
 public class SongEvent {
 
-
 	public SongEvent(double timeSeconds, double durationSeconds) {
 		super();
 		this.timeSeconds = timeSeconds;

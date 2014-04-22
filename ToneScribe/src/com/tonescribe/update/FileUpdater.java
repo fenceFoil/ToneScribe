@@ -60,8 +60,7 @@ import java.util.zip.ZipInputStream;
  * messages as a file is updated.<br>
  * <br>
  * The properties file should be laid out like this: If you "fileName" is "mod":<br>
- * mod.latest=0.9.2
- * mod.download=http://dl.dropbox.com/gibberishgibbersih
+ * mod.latest=0.9.2 mod.download=http://dl.dropbox.com/gibberishgibbersih
  * /MineTunes-0_9_2-MC1_4_6.zip
  */
 public class FileUpdater {

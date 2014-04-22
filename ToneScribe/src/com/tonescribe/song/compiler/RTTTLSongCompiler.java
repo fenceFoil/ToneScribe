@@ -230,8 +230,8 @@ public class RTTTLSongCompiler implements SongCompiler {
 				// Add note to song
 				if (!isRest) {
 					noteValue = noteValue + (octave + 1) * 12;
-					//System.out.println("noteValue = " + noteValue
-					//		+ " duration = " + wholeNoteDuration);
+					// System.out.println("noteValue = " + noteValue
+					// + " duration = " + wholeNoteDuration);
 					song.addTone(noteValue, wholeNoteDuration, tempo);
 				} else {
 					song.addRest(wholeNoteDuration, tempo);

@@ -41,8 +41,8 @@ package com.tonescribe.update;
  * same as info, but with a yellow or red color code in front.<br>
  * }}<br>
  * <br>
- * Another option is to write the messages into a gui (preferably the
- * one where the user presses the "update" button)
+ * Another option is to write the messages into a gui (preferably the one where
+ * the user presses the "update" button)
  * 
  */
 public interface FileUpdaterListener {

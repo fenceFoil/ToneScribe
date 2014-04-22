@@ -37,7 +37,6 @@ package com.tonescribe.song;
 public class ToneEvent extends SongEvent {
 	public double pitch;
 
-
 	public ToneEvent(double timeSeconds, double durationSeconds, double pitch) {
 		super(timeSeconds, durationSeconds);
 		this.pitch = pitch;

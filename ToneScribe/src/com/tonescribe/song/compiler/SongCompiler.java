@@ -38,5 +38,5 @@ import com.tonescribe.song.Song;
  * 
  */
 public interface SongCompiler {
-	public Song compile (String text, int selectionStart, int selectionEnd);
+	public Song compile(String text, int selectionStart, int selectionEnd);
 }
