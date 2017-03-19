@@ -1,10 +1,10 @@
 # Henry Purcell: King Arthur
 # Let Not A Moon-Born Elf Mislead Ye
 
-T240 KAMajor
+T120 KAMajor
 
 Tran+24
-Aq. Bi A Eh A 
+Aq. C5i A Eh A 
 B C5 D5 C5 Ah
 E5 B B Bh C5
 D5i C5i B A Gs As B Ei E

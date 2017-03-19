@@ -1,0 +1,17 @@
+T200
+KBbMajor
+
+D5i E5i D5i E5i D5i E5i 
+D5i E5i F5i E5i D5i E5i 
+D5i E5i F5i E5i D5i E5i 
+D5i E5i D5i C5i Bi Ai 
+
+Gi Ai Gi Ai Gi Bi
+Ai Bi Ai Bi Ai C5i
+Bi Ai Gi Ai Bi Gi
+Ai Bi Ai Bi Ai C5i
+Bi Ai Gi Ai Bi Gi
+C5i Bi Ai Bi C5i Ai
+D5i Bi Gi Ai Gi Ai
+Bi C5i Bi C5i Bi C5i
+
