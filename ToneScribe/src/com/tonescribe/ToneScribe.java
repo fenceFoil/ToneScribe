@@ -89,6 +89,7 @@ import com.tonescribe.song.linker.BeepSongLinker;
 import com.tonescribe.song.linker.GenericSongLinker;
 import com.tonescribe.song.linker.PreciseSongLinker;
 import com.tonescribe.song.linker.SongLinker;
+import com.tonescribe.song.linker.TabTableLinker;
 import com.tonescribe.update.CompareVersion;
 import com.tonescribe.update.FileUpdater;
 
@@ -379,6 +380,18 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 				changeLinker(new GenericSongLinker());
 			}
 		});
+		
+
+		JRadioButtonMenuItem rdbtnmntmTabs = new JRadioButtonMenuItem(
+				"Tab Separated Values");
+		mnOutput.add(rdbtnmntmTabs);
+		rdbtnmntmTabs.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				changeLinker(new TabTableLinker());
+			}
+		});
 
 		JRadioButtonMenuItem rdbtnmntmStandardBeepStatements = new JRadioButtonMenuItem(
 				"TI beep() & __delay_cycles()");
@@ -416,6 +429,7 @@ public class ToneScribe extends JFrame implements ClipboardOwner {
 		songLinkerGroup.add(rdbtnmntmGeneric);
 		songLinkerGroup.add(rdbtnmntmStandardBeepStatements);
 		songLinkerGroup.add(rdbtnmntmPreciseTones);
+		songLinkerGroup.add(rdbtnmntmTabs);
 
 		JSeparator separator_3 = new JSeparator();
 		mnOutput.add(separator_3);
