@@ -68,6 +68,7 @@ public class SongPlayer {
 
 	public void playSong(Song song) {
 		try {
+			stopSongs();
 			final Clip clip = AudioSystem.getClip();
 			byte[] songData = generateSong(song);
 			clip.open(AUDIO_FORMAT, songData, 0, songData.length);
