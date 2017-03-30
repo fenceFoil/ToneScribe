@@ -96,7 +96,7 @@ import com.tonescribe.update.FileUpdater;
 @SuppressWarnings("serial")
 public class ToneScribe extends JFrame implements ClipboardOwner {
 
-	public static String CURRENT_VERSION = "1.0.0";
+	public static String CURRENT_VERSION = "1.1.0";
 	public static String UPDATE_INFO_URL = "https://dl.dropbox.com/s/7lhpka9t1inz8qb/currentVersion.txt";
 	public static String WEBSITE_URL = "http://tonescribe.weebly.com/";
 	public static String OUTPUT_WEBSITE_URL = "http://tonescribe.weebly.com/output.html";
